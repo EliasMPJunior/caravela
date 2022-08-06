@@ -1,0 +1,27 @@
+{
+    "name": "eliasmpjunior/seeder",
+    "description": "Call and send data to APIs in the easiest way.",
+    "authors": [
+        {
+            "name": "eliasmpjunior",
+            "email": "elias@brasidata.com.br",
+            "homepage": "https://brasidata.com.br"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {
+            "Eliasmpjunior\\Seeder": "src"
+        }
+    },
+    "require": {
+        "php": "^7.3 || ^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eliasmpjunior\\Seeder\\Providers\\SeederServiceProvider"
+            ]
+        }
+    }
+}
