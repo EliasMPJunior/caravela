@@ -68,6 +68,7 @@ class CaravelaServicesCommand extends Command
         try
         {
             $services = Service::all();
+            //$services = 'Service::all()';
 
         $declaredClasses = collect(get_declared_classes())
                                 ->filter(function ($item) {
