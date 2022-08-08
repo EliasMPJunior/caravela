@@ -1,11 +1,9 @@
 <?php
 
-namespace Eliasmpjunior\Seeder\Exceptions;
-
-use Eliasmpjunior\Brasitable\Contracts\BrasitableException;
+namespace Eliasmpjunior\Caravela\Exceptions;
 
 
-class TableShowErrorException extends SeederException
+class TableShowErrorException extends CaravelaException
 {
     protected $brasitableException = null;
 

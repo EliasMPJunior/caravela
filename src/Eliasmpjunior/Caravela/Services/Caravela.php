@@ -1,15 +1,15 @@
 <?php
 
-namespace Eliasmpjunior\Seeder\Services;
+namespace Eliasmpjunior\Caravela\Services;
 
 use Web64\Colors\Facades\Colors;
 
 use Eliasmpjunior\Brasitable\Services\Brasitable;
 use Eliasmpjunior\Brasitable\Contracts\BrasitableException;
-use Eliasmpjunior\Seeder\Exceptions\TableShowErrorException;
+use Eliasmpjunior\Caravela\Exceptions\TableShowErrorException;
 
 
-class Seeder
+class Caravela
 {
 	public static function printInfo()
 	{
@@ -27,7 +27,7 @@ class Seeder
         $tableContent = array(
                             array(
                                 'Name',
-                                'eliasmpjunior/seeder'
+                                'eliasmpjunior/caravela'
                             ),
                             array(
                                 'Version',
@@ -70,7 +70,7 @@ class Seeder
 
 	public static function printTable(array $tableHeader, array $tableContent = array())
 	{
-		$currentTable = new Seeder($tableHeader);
+		$currentTable = new Caravela($tableHeader);
 		$currentTable->setTableContent($tableContent);
 		$currentTable->printAll();
 	}

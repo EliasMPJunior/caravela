@@ -1,13 +1,13 @@
 <?php
 
-namespace Eliasmpjunior\Seeder\Models;
+namespace Eliasmpjunior\Caravela\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 
 class Service extends Model
 {
-    //protected $connection = 'tenant';
+    protected $connection = 'caravela';
     protected $keyType = 'string';
     public $incrementing = false;
 

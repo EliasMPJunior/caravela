@@ -1,13 +1,13 @@
 <?php
 
-namespace Eliasmpjunior\Seeder\Exceptions;
+namespace Eliasmpjunior\Caravela\Exceptions;
 
 use Web64\Colors\Facades\Colors;
 
 use RuntimeException;
 
 
-abstract class SeederException extends RuntimeException
+abstract class CaravelaException extends RuntimeException
 {
     abstract public function printException();
 
@@ -26,6 +26,13 @@ abstract class SeederException extends RuntimeException
         $this->printEmptyErrorLine($errorTitle, $mainMessage);
 
         Colors::line('');
+
+        if (is_string($extraMessage))
+        {
+            Colors::line($extraMessage);
+
+            Colors::line('');
+        }
     }
 
     protected function printEmptyErrorLine(string $errorTitle, string $mainMessage)

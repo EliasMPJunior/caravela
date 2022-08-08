@@ -1,5 +1,5 @@
 {
-    "name": "eliasmpjunior/seeder",
+    "name": "eliasmpjunior/caravela",
     "description": "Call and send data to APIs in the easiest way.",
     "authors": [
         {
@@ -11,7 +11,7 @@
     "license": "MIT",
     "autoload": {
         "psr-0": {
-            "Eliasmpjunior\\Seeder": "src"
+            "Eliasmpjunior\\Caravela": "src"
         }
     },
     "require": {
@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Eliasmpjunior\\Seeder\\Providers\\SeederServiceProvider"
+                "Eliasmpjunior\\Caravela\\Providers\\EmpjCaravelaServiceProvider"
             ]
         }
     }

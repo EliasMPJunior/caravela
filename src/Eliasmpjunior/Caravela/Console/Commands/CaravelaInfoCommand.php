@@ -1,22 +1,24 @@
 <?php
 
-namespace Eliasmpjunior\Seeder\Console\Commands;
+namespace Eliasmpjunior\Caravela\Console\Commands;
 
+use Illuminate\Support\Str;
 use Illuminate\Console\Command;
-use Illuminate\Database\QueryException;
+use Web64\Colors\Facades\Colors;
+use Illuminate\Support\Facades\Log;
 
-use Eliasmpjunior\Seeder\Models\Service;
-use Eliasmpjunior\Seeder\Exceptions\DatabaseQueryException;
+use Eliasmpjunior\Caravela\Services\Caravela;
+use Eliasmpjunior\Caravela\Exceptions\CaravelaException;
 
 
-class SeederServicesCommand extends Command
+class CaravelaInfoCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'seeder:services';
+    protected $signature = 'seeder:info';
 
     /**
      * The console command description.
@@ -44,11 +46,11 @@ class SeederServicesCommand extends Command
     {
         try
         {
-            $services = Service::all();
+            Caravela::printInfo();
         }
-        catch (QueryException $e)
+        catch (CaravelaException $e)
         {
-            (new DatabaseQueryException($e))->printException();
+            $e->printException();
 
             return 1;
         }

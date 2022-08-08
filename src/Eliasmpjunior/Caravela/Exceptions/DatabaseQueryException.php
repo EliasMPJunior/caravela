@@ -1,6 +1,6 @@
 <?php
 
-namespace Eliasmpjunior\Seeder\Exceptions;
+namespace Eliasmpjunior\Caravela\Exceptions;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\QueryException;
@@ -8,7 +8,7 @@ use Illuminate\Database\QueryException;
 use Eliasmpjunior\Brasitable\Contracts\BrasitableException;
 
 
-class DatabaseQueryException extends SeederException
+class DatabaseQueryException extends CaravelaException
 {
     protected $queryException = null;
 
@@ -30,7 +30,7 @@ class DatabaseQueryException extends SeederException
                 and Str::contains($this->queryException->getMessage(), '" does not exist')
             )
         {
-            $this->printMessage('The table "'.Str::afterLast(Str::beforeLast($this->queryException,'"'),'"').'" has not been found. Migrate your database before using Seeder.');
+            $this->printMessage('The table "'.Str::afterLast(Str::beforeLast($this->queryException,'"'),'"').'" has not been found. Migrate your database before using Caravela.');
         }
         else
         {
