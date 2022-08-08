@@ -1,12 +1,12 @@
 <?php
 
-namespace Eliasmpjunior\Caravela\Services;
+namespace Caravela\Services;
 
 use Web64\Colors\Facades\Colors;
 
 use Eliasmpjunior\Brasitable\Services\Brasitable;
 use Eliasmpjunior\Brasitable\Contracts\BrasitableException;
-use Eliasmpjunior\Caravela\Exceptions\TableShowErrorException;
+use Caravela\Exceptions\TableShowErrorException;
 
 
 class Caravela

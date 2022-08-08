@@ -1,6 +1,6 @@
 <?php
 
-namespace Eliasmpjunior\Caravela\Models;
+namespace Caravela\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

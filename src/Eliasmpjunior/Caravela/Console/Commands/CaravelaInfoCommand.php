@@ -1,14 +1,14 @@
 <?php
 
-namespace Eliasmpjunior\Caravela\Console\Commands;
+namespace Caravela\Console\Commands;
 
 use Illuminate\Support\Str;
 use Illuminate\Console\Command;
 use Web64\Colors\Facades\Colors;
 use Illuminate\Support\Facades\Log;
 
-use Eliasmpjunior\Caravela\Services\Caravela;
-use Eliasmpjunior\Caravela\Exceptions\CaravelaException;
+use Caravela\Services\Caravela;
+use Caravela\Exceptions\CaravelaException;
 
 
 class CaravelaInfoCommand extends Command

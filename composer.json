@@ -10,8 +10,11 @@
     ],
     "license": "MIT",
     "autoload": {
-        "psr-0": {
-            "Eliasmpjunior\\Caravela": "src"
+        "psr-4": {
+            "Eliasmpjunior\\Caravela\\": "src/Eliasmpjunior/",
+            "Caravela\\": "src/Eliasmpjunior/",
+            "Eliasmpjunior\\Caravela\\": "src/Eliasmpjunior/Caravela/",
+            "Caravela\\": "src/Eliasmpjunior/Caravela/"
         }
     },
     "require": {
@@ -20,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Eliasmpjunior\\Caravela\\Providers\\EmpjCaravelaServiceProvider"
+                "Caravela\\Providers\\CaravelaServiceProvider"
             ]
         }
     }

@@ -1,14 +1,15 @@
 <?php
 
-namespace Eliasmpjunior\Caravela\Console\Commands;
+namespace Caravela\Console\Commands;
 
+use Illuminate\Support\Str;
 use Illuminate\Console\Command;
 use Web64\Colors\Facades\Colors;
 use Illuminate\Database\QueryException;
 
-use Eliasmpjunior\Caravela\Models\Service;
-use Eliasmpjunior\Caravela\Exceptions\DatabaseQueryException;
-use Eliasmpjunior\Caravela\Exceptions\MissingConfigFileException;
+use Caravela\Models\Service;
+use Caravela\Exceptions\DatabaseQueryException;
+use Caravela\Exceptions\MissingConfigFileException;
 
 
 class CaravelaServicesCommand extends Command
@@ -67,6 +68,17 @@ class CaravelaServicesCommand extends Command
         try
         {
             $services = Service::all();
+
+        $declaredClasses = collect(get_declared_classes())
+                                ->filter(function ($item) {
+                                    return Str::contains($item, '\\Models\\');
+                                })
+                                ->keyBy(function ($item) {
+                                    return Str::afterLast($item, '\\');
+                                })
+                                ->all();
+
+        dd($declaredClasses,$services);
         }
         catch (QueryException $e)
         {

@@ -1,16 +1,16 @@
 <?php
 
-namespace Eliasmpjunior\Caravela\Providers;
+namespace Caravela\Providers;
 
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 
-use Eliasmpjunior\Caravela\Console\Commands\CaravelaInfoCommand;
-use Eliasmpjunior\Caravela\Console\Commands\CaravelaServicesCommand;
+use Caravela\Console\Commands\CaravelaInfoCommand;
+use Caravela\Console\Commands\CaravelaServicesCommand;
 
 
-class EmpjCaravelaServiceProvider extends ServiceProvider
+class CaravelaServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
